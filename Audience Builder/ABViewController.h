@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ABAsset.h"
 
-@interface ABViewController : UIViewController
+@class OOOoyalaPlayerViewController;
+
+@interface ABViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property (strong, nonatomic) NSArray *assets;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
 @end
